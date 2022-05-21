@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/food_add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/item_padding_large"
+    tools:context=".view.screen.FoodAddFragment">
+
+    <EditText
+        android:id="@+id/foodadd_edtxt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/foodadd_edtxt_name"
+        android:padding="@dimen/item_padding_normal"
+
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/foodadd_edtxt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodadd_edtxt1"
+        android:padding="@dimen/item_padding_normal"
+        android:hint="@string/foodadd_edittxt_description"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/foodadd_edtxt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodadd_edtxt2"
+        android:padding="@dimen/item_padding_normal"
+        android:hint="@string/foodadd_edittxt_amount"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="home_screen_title">Total food</string>
+    <string name="btn_viewfood">view foods</string>
+    <string name="menu_add">Add</string>
+    <string name="foodadd_edtxt_name">Name</string>
+    <string name="foodadd_edittxt_description">Description</string>
+    <string name="foodadd_edittxt_amount">Amount</string>
+    <string name="save">Save</string>
+    <string name="foodadd_edittxt_quantity">Quantity</string>
+    <string name="foodadd_edittxt_cookingTime">CookingTime</string>
+    <string name="btn_food">food</string>
+    <string name="btn_receipe">receipe</string>
+    <string name="option">Option</string>
 </resources>
