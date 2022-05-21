@@ -1,4 +1,4 @@
-package com.interview.fatsecret
+package com.interview.fatsecret.util
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

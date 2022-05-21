@@ -10,12 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.interview.fatsecret.FOODADD_EXTRA_DATA
-import com.interview.fatsecret.FOOD_VIEWSTATE
+import com.interview.fatsecret.util.FOODADD_EXTRA_DATA
+import com.interview.fatsecret.util.FOOD_VIEWSTATE
 import com.interview.fatsecret.viewmodel.ListViewModel
 import com.interview.fatsecret.R
-import com.interview.fatsecret.RECEIPE_VIEWSTATE
-import com.interview.fatsecret.entity.Food
+import com.interview.fatsecret.util.RECEIPE_VIEWSTATE
 import com.interview.fatsecret.view.FoodListViewObject
 import com.interview.fatsecret.view.component.FoodRecyclerAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -69,13 +68,17 @@ class ListFragment : Fragment() {
                 .setTitle(getString(R.string.option))
                 .setPositiveButton(getString(R.string.btn_food)) { _,_ ->
 
-                    startActivity( Intent(activity, FoodAddActivity::class.java).apply { putExtra(FOODADD_EXTRA_DATA,
-                        FOOD_VIEWSTATE) })
+                    startActivity( Intent(activity, FoodAddActivity::class.java).apply { putExtra(
+                        FOODADD_EXTRA_DATA,
+                        FOOD_VIEWSTATE
+                    ) })
                  }
                 .setNeutralButton(getString(R.string.btn_receipe),{_,_->
 
-                    startActivity( Intent(activity, FoodAddActivity::class.java).apply { putExtra(FOODADD_EXTRA_DATA,
-                        RECEIPE_VIEWSTATE) })
+                    startActivity( Intent(activity, FoodAddActivity::class.java).apply { putExtra(
+                        FOODADD_EXTRA_DATA,
+                        RECEIPE_VIEWSTATE
+                    ) })
 
                 })
                 .create().show()

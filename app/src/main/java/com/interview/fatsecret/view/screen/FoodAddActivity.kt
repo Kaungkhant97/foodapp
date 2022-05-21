@@ -2,7 +2,7 @@ package com.interview.fatsecret.view.screen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.interview.fatsecret.FOODADD_EXTRA_DATA
+import com.interview.fatsecret.util.FOODADD_EXTRA_DATA
 import com.interview.fatsecret.R
 import dagger.hilt.android.AndroidEntryPoint
 

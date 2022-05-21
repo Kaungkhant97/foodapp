@@ -1,20 +1,17 @@
 package com.interview.fatsecret.view.screen
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.InputType
-import android.util.Log
 import android.view.*
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.textfield.TextInputLayout
-import com.interview.fatsecret.FOOD_VIEWSTATE
+import com.interview.fatsecret.util.FOOD_VIEWSTATE
 import com.interview.fatsecret.R
-import com.interview.fatsecret.RECEIPE_VIEWSTATE
+import com.interview.fatsecret.util.RECEIPE_VIEWSTATE
 import com.interview.fatsecret.viewmodel.FoodAddViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

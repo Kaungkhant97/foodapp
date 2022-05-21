@@ -1,4 +1,4 @@
-package com.interview.fatsecret
+package com.interview.fatsecret.util
 
 import com.interview.fatsecret.entity.Receipe
 
