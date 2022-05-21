@@ -1,4 +1,4 @@
-package com.interview.fatsecret.local
+package com.interview.fatsecret.model
 
 import com.interview.fatsecret.entity.Food
 import com.interview.fatsecret.entity.Receipe

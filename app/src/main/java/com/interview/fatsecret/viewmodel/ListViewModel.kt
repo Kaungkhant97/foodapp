@@ -3,8 +3,7 @@ package com.interview.fatsecret.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.interview.fatsecret.entity.Food
-import com.interview.fatsecret.local.LocalDataSource
+import com.interview.fatsecret.model.LocalDataSource
 import com.interview.fatsecret.view.FoodListViewObject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*

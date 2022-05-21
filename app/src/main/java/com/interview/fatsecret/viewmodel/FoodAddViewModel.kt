@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.interview.fatsecret.entity.Food
 import com.interview.fatsecret.entity.Receipe
-import com.interview.fatsecret.local.LocalDataSource
+import com.interview.fatsecret.model.LocalDataSource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

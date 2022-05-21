@@ -1,4 +1,4 @@
-package com.interview.fatsecret.local
+package com.interview.fatsecret.model
 
 import androidx.room.Dao
 import androidx.room.Insert
