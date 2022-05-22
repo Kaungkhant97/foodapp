@@ -37,7 +37,7 @@ class ListFragment : Fragment() {
 
         setHasOptionsMenu(true);
 
-        val view:View = inflater.inflate(R.layout.fragment_list, container, false);
+        val view: View = inflater.inflate(R.layout.fragment_list, container, false);
 
         return view;
 
@@ -45,48 +45,53 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_foodlist);
-        foodadapter = FoodRecyclerAdapter(ArrayList<FoodListViewObject>(),{ food -> Toast.makeText(context,food.name,Toast.LENGTH_LONG)});
+        foodadapter = FoodRecyclerAdapter(ArrayList<FoodListViewObject>(),
+            { food -> Toast.makeText(context, food.name, Toast.LENGTH_LONG) });
         recyclerView.adapter = foodadapter;
-        recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false);
+        recyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
 
-       listViewModel._allFoodViewObject.observe(viewLifecycleOwner,{foodlist -> foodadapter.addnewdata(foodlist)})
-
+        listViewModel._allFoodViewObject.observe(viewLifecycleOwner,
+            { foodlist -> foodadapter.addnewdata(foodlist) })
 
 
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 
-        inflater.inflate(R.menu.list_menu,menu);
+        inflater.inflate(R.menu.list_menu, menu);
         super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.list_menu_add){
+        if (item.itemId == R.id.list_menu_add) {
             AlertDialog.Builder(requireContext())
                 .setTitle(getString(R.string.option))
-                .setPositiveButton(getString(R.string.btn_food)) { _,_ ->
+                .setPositiveButton(getString(R.string.btn_food)) { _, _ ->
+                    openNewActivity(FOOD_VIEWSTATE);
 
-                    startActivity( Intent(activity, FoodAddActivity::class.java).apply { putExtra(
-                        FOODADD_EXTRA_DATA,
-                        FOOD_VIEWSTATE
-                    ) })
-                 }
-                .setNeutralButton(getString(R.string.btn_receipe),{_,_->
+                }
+                .setNeutralButton(getString(R.string.btn_receipe), { _, _ ->
 
-                    startActivity( Intent(activity, FoodAddActivity::class.java).apply { putExtra(
-                        FOODADD_EXTRA_DATA,
-                        RECEIPE_VIEWSTATE
-                    ) })
+                    openNewActivity(RECEIPE_VIEWSTATE)
 
                 })
                 .create().show()
 
 
-
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private fun openNewActivity(foodViewstate: Int) {
+        startActivity(Intent(activity, FoodAddActivity::class.java).apply {
+            putExtra(
+                FOODADD_EXTRA_DATA,
+                foodViewstate
+            )
+        })
     }
 
 }

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:padding="@dimen/item_padding_large"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="5">
 
         <TextView
